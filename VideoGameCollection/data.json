@@ -1,0 +1,74 @@
+{
+    "games": [
+        {
+            "id": 1,
+            "name": "Genshin Impact",
+            "year": 2020,
+            "publisher": "miHoYo",
+            "imageURL": "https://i.pinimg.com/736x/73/32/52/7332527b2baa4785959b1b8e2ba41dce.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Fortnite",
+            "year": 2017,
+            "publisher": "Epic Games",
+            "imageURL": "https://logodix.com/logo/45400.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Valorant",
+            "year": 2020,
+            "publisher": "Riot Games",    
+            "imageURL": "https://steamuserimages-a.akamaihd.net/ugc/79313528057C9E389FD/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
+        },
+        {
+            "id": 4,
+            "name": "Apex",
+            "year": 2019,
+            "publisher": "EA",
+            "imageURL": "https://seeklogo.com/images/A/apex-logo-F74B0C9FCD-seeklogo.com.png"
+        },
+        {
+            "id": 5,
+            "name": "Minecraft",
+            "year": 2011,
+            "publisher": "Mojang",
+            "imageURL": "https://1000logos.net/wp-content/uploads/2018/10/Minecraft-Logo.png"
+        },
+        {
+            "id": 6,
+            "name": "Roblox",
+            "year": 2006,
+            "publisher": "Roblox",
+            "imageURL": "https://1000logos.net/wp-content/uploads/2017/09/Roblox-Logo.png"
+        },
+        {
+            "id" : 7,
+            "name": "Legend of Zelda: Breath of the Wild",
+            "year": 2017,
+            "publisher": "Nintendo",
+            "imageURL": "https://static.wikia.nocookie.net/zelda_gamepedia_en/images/0/06/BotW_English_Logo.png/revision/latest/scale-to-width-down/320?cb=20170318074125"
+        },
+        {
+            "id": 8,
+            "name": "Legend of Zelda: Tears of the Kingdom",
+            "year": 2023,
+            "publisher": "Nintendo",
+            "imageURL": "https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Fbwv58k96gnn91.png"
+        },
+        {
+            "id": 9,
+            "name": "Grand Theft Auto 5",
+            "year": 2013,
+            "publisher": "Rockstar Games",
+            "imageURL": "https://banner2.cleanpng.com/20180802/wut/kisspng-grand-theft-auto-v-gta-5-online-gunrunning-logo-p-Подпишите-петицию-чтобы-gta-5b634298376d54.479137211533231768227.jpg"
+        },
+        {
+            "id": 10,
+            "name": "The Forest",
+            "year": 2014,
+            "publisher": "Endnight",
+            "imageURL": "https://gaming.tobii.com/wp-content/uploads/2017/12/TheForest-logo.png"
+        }
+    ]
+}
