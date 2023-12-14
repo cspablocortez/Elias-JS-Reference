@@ -1,4 +1,5 @@
 let videogameData;
+let currentId;
 
 document.addEventListener('DOMContentLoaded', function() {
     fetchVideoGameData()
@@ -24,20 +25,34 @@ async function fetchVideoGameData() { // this is  a promise
     populateCover(videogameData);
 }
 
-function populateCover(obj) {
+function populateCover(obj, id) {
     const imageCover = document.querySelector(".album-art");
     const title = document.querySelector(".album-title");
     const publisher = document.querySelector(".artist-name");
     const year = document.querySelector(".song-title");
 
-    title.textContent = `${obj.games[0].name}`;
-    publisher.textContent = `${obj.games[0].publisher}`;
-    year.textContent = `${obj.games[0].year}`;
-    imageCover.style.backgroundImage = `url(${obj.games[0].imageURL})`;
+    if (id == null) {
+        currentId = 0;
+    }
+
+    title.textContent = `${obj.games[currentId].name}`;
+    publisher.textContent = `${obj.games[currentId].publisher}`;
+    year.textContent = `${obj.games[currentId].year}`;
+    imageCover.style.backgroundImage = `url(${obj.games[currentId].imageURL})`;
 }
 
 
 function nextItem() {
     // move catalog forward
+    currentId = Math.abs((currentId + 1) % videogameData.games.length);
+    populateCover(videogameData, currentId);
+    console.log(currentId);
+}
+
+function prevItem() {
+    // move catalog forward
+    currentId = Math.abs((currentId - 1)) % videogameData.games.length;
+    populateCover(videogameData, currentId);
+    console.log(currentId);
 }
 
