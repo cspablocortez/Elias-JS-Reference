@@ -187,7 +187,7 @@ body {
 
 #prev {
     position: absolute;
-    top: 50vh;
+    top: 60vh;
     left: 25vh;
     background: none;
     
@@ -195,7 +195,7 @@ body {
 
 #next {
     position: absolute;
-    top: 50vh;
+    top: 60vh;
     right: 25vh;
     background: none;
     
