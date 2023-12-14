@@ -1,15 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
 
-    // Pause/Play functionality
-    var playButton = document.querySelector('.control-play');
-    var album = document.querySelector('.album');
-
-    playButton.addEventListener('click', function() {
-        var musicPlayerContainer = document.querySelector('.music-player-container');
-        musicPlayerContainer.classList.toggle('is-playing');
-    });
-
-});
 
 
 const imageCoverURLs =
@@ -24,8 +13,3 @@ const imageCoverURLs =
 const imageCover = document.querySelector('.album-art');
 let idx = 0;
 
-function nextItem() {
-    console.log(idx);
-    idx = (idx + 1) % imageCoverURLs.length;
-    imageCover.style.backgroundImage = `url(${imageCoverURLs[idx]})`;
-}
