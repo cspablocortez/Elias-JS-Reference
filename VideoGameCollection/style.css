@@ -186,18 +186,26 @@ body {
   }
 }
 
-#prev {
+/* write this below */
+
+.collection-controls {
     position: absolute;
-    top: 60vh;
-    left: 25vh;
-    background: none;
-    
+    bottom: 10vh;
+    width: 100%;
+    /* margin: 0 auto; */
+    text-align: center;
+    letter-spacing: 8rem;
 }
 
-#next {
-    position: absolute;
-    top: 60vh;
-    right: 25vh;
+.collection-controls button {
+    border: none;
     background: none;
-    
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    color: #4e5e57;
+}
+
+.collection-controls button:hover {
+  cursor: pointer;
 }

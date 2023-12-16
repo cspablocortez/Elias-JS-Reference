@@ -5,31 +5,44 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Video Game Collection</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/skeleton.css">
   <link href="style.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
-    <div class="music-player-container is-playing">
 
-        <div class="music-player">
-            <div class="player-content-container">
-                <h1 class="artist-name">FIFTY FIFTY</h1><!--  /.track-title -->
-                <h2 class="album-title">The Beginning: Cupid</h2><!--  /.album-title -->
-                <h3 class="song-title">"Cupid"</h3><!--  /.song-title -->
-                <div class="music-player-controls">
-                    <div class="control-back"></div><!--  /.control-back -->
-                    <div class="control-play"></div><!--  /.control-play -->
-                    <div class="control-forwards"></div><!--  /.control-forwards -->
-                </div><!--  /.music-player-controls -->
-            </div><!--  /.player-content-container -->
+    
+    <div class="container">
+
+    <div class="row">
+        <div class="music-player-container is-playing">
+
+            <div class="music-player">
+                <div class="player-content-container">
+                    <h1 class="artist-name">FIFTY FIFTY</h1><!--  /.track-title -->
+                    <h2 class="album-title">The Beginning: Cupid</h2><!--  /.album-title -->
+                    <h3 class="song-title">"Cupid"</h3><!--  /.song-title -->
+                    <div class="music-player-controls">
+                        <div class="control-back"></div><!--  /.control-back -->
+                        <div class="control-play"></div><!--  /.control-play -->
+                        <div class="control-forwards"></div><!--  /.control-forwards -->
+                    </div><!--  /.music-player-controls -->
+                </div><!--  /.player-content-container -->
+            </div><!--  /.music-player -->
+
+            <div class="album">
+                <div class="album-art"></div><!--  /.album-art -->
+                <div class="vinyl"></div><!--  /.vinyl -->
+            </div><!--  /.album-art -->
+
+            
+
         </div><!--  /.music-player -->
+    </div>
 
-        <div class="album">
-            <div class="album-art"></div><!--  /.album-art -->
-            <div class="vinyl"></div><!--  /.vinyl -->
-        </div><!--  /.album-art -->
-
+    <div class="row">
         <div class="collection-controls">
             <button id="prev" onclick="prevItem()">
                 <i class="fa-solid fa-arrow-left"></i>
@@ -38,10 +51,13 @@
                 <i class="fa-solid fa-arrow-right"></i>
             </button>
         </div>
+    </div>
+        
 
-    </div><!--  /.music-player -->
-
+    </div>
     
+
+
   <script src="script.js"></script>
 </body>
 
