@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/skeleton.css">
+    <title>Elias | Greeting</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 id="greeting-header"></h1>
+
+        </div>
+    </div>
+
+    <script>
+        // 1. Create a constant called name and set it equal to the result
+        // of a prompt() that asks the user for their name
+        const name = prompt("Enter your name: ");
+
+
+        // 2. Using document.getElementById("someID"), change the text of the h1
+        // and set it equal to the value of the constant name
+
+        document.getElementById("greeting-header").textContent = name;
+
+    </script>
+</body>
+</html>
