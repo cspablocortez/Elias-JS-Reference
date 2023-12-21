@@ -45,7 +45,7 @@
 @media (min-width: 400px) {
   .container {
     width: 85%;
-    padding: 0; }
+    padding: 40px; }
 }
 
 /* For devices larger than 550px */
