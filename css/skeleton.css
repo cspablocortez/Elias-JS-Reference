@@ -158,9 +158,13 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #1EAEDB; }
+  /* color: #1EAEDB; / */
+  color: #e51717; /* xmas theme */
+}
 a:hover {
-  color: #0FA0CE; }
+  /* color: #0FA0CE;  */
+  color: white; /* xmas theme */
+}
 
 
 /* Buttons
