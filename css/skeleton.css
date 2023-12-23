@@ -158,12 +158,10 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  /* color: #1EAEDB; / */
-  color: #e51717; /* xmas theme */
+  color: #1EAEDB; 
 }
 a:hover {
-  /* color: #0FA0CE;  */
-  color: white; /* xmas theme */
+  color: #0FA0CE; 
 }
 
 
