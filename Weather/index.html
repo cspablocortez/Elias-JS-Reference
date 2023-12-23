@@ -6,8 +6,44 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/skeleton.css">
     <title>Weather</title>
+
+    <style>
+        .weather {
+            max-width: 600px;
+        }
+
+        .weather h1, p {
+            margin-bottom: 0rem;
+        }
+
+        .weather h1 {
+            margin-top: -1.5rem;
+        }
+
+        .weather img {
+            height: 48px;
+        }
+    </style>
 </head>
+
+
 <body>
-    
+    <div class="container">
+        <div class="row">
+            <h1>Weather</h1>
+        </div>
+
+        <div class="row weather">
+            <div class="six columns">
+                <h5>Las Vegas</h5>
+                <h1>61º</h1>
+            </div>
+            <div class="six columns">
+                <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="">
+                <p>Sunny</p>
+                <p>H:61º L:42º</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
