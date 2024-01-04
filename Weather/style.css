@@ -1,0 +1,46 @@
+html {
+    background-color: #9dcaff;
+    color: white;
+}
+
+.weather {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.weather h1, p {
+    margin-bottom: 0rem;
+}
+
+.weather h1 {
+    margin-top: -1.5rem;
+}
+
+.weather img {
+    height: 48px;
+}
+
+hr {
+    max-width: 600px;
+}
+
+.daycast {
+    text-align: center;
+}
+
+.morning {
+    height: 100vh;
+    background: hsla(203, 79%, 87%, 1);
+    background: linear-gradient(360deg, hsla(203, 79%, 87%, 1) 0%, hsla(204, 70%, 49%, 1) 100%, hsla(207, 45%, 63%, 1) 100%);
+}
+
+.night {
+    height: 100vh;
+    background: hsla(0, 3%, 19%, 1);
+    background: linear-gradient(180deg, hsla(0deg 3.3% 9.84%) 0%, hsla(252deg 59.4% 19.72%) 100%);
+    color: white;
+}
+
+.morning h1, h2, h3, h4, h5, h6, p {
+    color: white;
+}
