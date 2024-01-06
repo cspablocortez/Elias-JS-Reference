@@ -22,6 +22,11 @@ async function fetchWeatherData() {
 
 function populateWeather(obj) {
     // const searchResults = document.getElementById('search-results');
+
+    const currentTime = obj.location.localtime.slice(-5);
+    const sunrise = obj.forecast.forecastday[0].astro.sunrise;
+    const sunset = obj.forecast.forecastday[0].astro.sunset;
+
     const city = document.getElementById('city');
     const temperature = document.getElementById("temperature");
     const forecast = document.getElementById("forecast");
@@ -37,11 +42,14 @@ function populateWeather(obj) {
     icon.src = obj.current.condition.icon;
     highLowTemps.textContent = `H: ${Math.floor(obj.forecast.forecastday[0].day.maxtemp_f)}º L:${Math.floor(obj.forecast.forecastday[0].day.mintemp_f)}º`;
 
-    setBackground(obj);
+    // Get current hours
+    const currentHour = parseInt(currentTime.slice(0, 2));
+    console.log("Current Hour: " + currentHour);
+
+
+    // setBackground(obj);
 }
 
-function setBackground(obj) {
 
-}
 
 fetchWeatherData();
