@@ -46,6 +46,9 @@ function populateWeather(obj) {
     const currentHour = parseInt(currentTime.slice(0, 2));
     console.log("Current Hour: " + currentHour);
 
+    const sixHourForecast = obj.forecast.forecastday[0].hour;
+    console.log(sixHourForecast.slice(17));
+
 
     // setBackground(obj);
 }
