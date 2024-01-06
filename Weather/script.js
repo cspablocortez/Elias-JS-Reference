@@ -53,6 +53,4 @@ function populateWeather(obj) {
     // setBackground(obj);
 }
 
-
-
 fetchWeatherData();
