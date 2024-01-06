@@ -1,5 +1,5 @@
 const API_KEY = '657a30cb69d44cdba9a01524231401';
-const LOCATION = '89141';
+const LOCATION = 'Jordan';
 
 async function fetchWeatherData() {
     console.log("Sending request...");
@@ -66,13 +66,17 @@ function setBackground(currentTime, sunriseTime, sunsetTime) {
     document.body.classList.remove('day');
     document.body.classList.remove('dusk');
     document.body.classList.remove('night');
-    
+
     var currentDate = new Date();
     var currentDateString = currentDate.toISOString().split('T')[0];
 
     var currentTimeObj = new Date(currentDateString + "T" + currentTime);
     var sunriseTimeObj = new Date(currentDateString + " " + sunriseTime);
     var sunsetTimeObj = new Date(currentDateString + " " + sunsetTime);
+
+    if (currentTimeObj < sunriseTime) {
+        document.body.classList.add('night'); 
+    }
     
     if (currentTimeObj > sunriseTimeObj && currentTimeObj < sunsetTimeObj) {
         document.body.classList.add('dusk');
