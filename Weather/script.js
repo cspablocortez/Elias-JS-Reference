@@ -62,12 +62,26 @@ function fetchSixHourForecast(currentHour, obj) {
     }
 }
 
-function setBackground(currentTime, sunrise, sunset) {
-    let currentBackgroundTheme = document.body.classList; // dusk
+function setBackground(currentTime, sunriseTime, sunsetTime) {
+    document.body.classList.remove('day');
+    document.body.classList.remove('dusk');
+    document.body.classList.remove('night');
     
-    console.log("Current time is: " + currentTime);
-    console.log("Sunrise was at: " + sunrise);
-    console.log("Sunset is at: " + sunset);
+    var currentDate = new Date();
+    var currentDateString = currentDate.toISOString().split('T')[0];
+
+    var currentTimeObj = new Date(currentDateString + "T" + currentTime);
+    var sunriseTimeObj = new Date(currentDateString + " " + sunriseTime);
+    var sunsetTimeObj = new Date(currentDateString + " " + sunsetTime);
+    
+    if (currentTimeObj > sunriseTimeObj && currentTimeObj < sunsetTimeObj) {
+        document.body.classList.add('dusk');
+    }
+
+    if (currentTimeObj > sunsetTimeObj) {
+        document.body.classList.add('night');
+    }
+
 }
 
 fetchWeatherData();
