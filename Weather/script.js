@@ -1,5 +1,5 @@
 const API_KEY = '657a30cb69d44cdba9a01524231401';
-const LOCATION = 'Tokyo';
+const LOCATION = 'Las Vegas';
 
 async function fetchWeatherData() {
     console.log("Sending request...");
@@ -80,17 +80,17 @@ function setBackground(currentTime, sunriseTime, sunsetTime) {
 
     if (currentTimeObj < sunriseTime) {
         document.body.classList.add('night'); 
-        console.log("Foo")
+        console.log("Background set to night.");
     }
     
     if (currentTimeObj > sunriseTimeObj && currentTimeObj < sunsetTimeObj) {
         document.body.classList.add('dusk');
-        console.log("bar")
+        console.log("Background set to dusk.");
     }
 
     if (currentTimeObj > sunsetTimeObj) {
         document.body.classList.add('night');
-        console.log("Foobar")
+        console.log("Background set to night");
     }
 
 }
