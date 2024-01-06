@@ -34,6 +34,13 @@ hr {
     background: linear-gradient(360deg, hsla(203, 79%, 87%, 1) 0%, hsla(204, 70%, 49%, 1) 100%, hsla(207, 45%, 63%, 1) 100%);
 }
 
+.dusk {
+    height: 100vh;
+    background: hsla(220, 66%, 60%, 1);
+    background: linear-gradient(180deg, hsla(220, 66%, 60%, 1) 0%, hsla(31, 44%, 81%, 1) 100%);
+    color: white;
+}
+
 .night {
     height: 100vh;
     background: hsla(0, 3%, 19%, 1);
