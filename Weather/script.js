@@ -1,8 +1,11 @@
+const API_KEY = '657a30cb69d44cdba9a01524231401';
+const LOCATION = '89141';
+
 async function fetchWeatherData() {
     console.log("Sending request...");
     // const location = document.getElementById('searchInput').value;
-    const location = '89141';
-    const requestURL = "https://api.weatherapi.com/v1/current.json?key=657a30cb69d44cdba9a01524231401&q=" + location;
+    // const requestURL = "https://api.weatherapi.com/v1/current.json?key=657a30cb69d44cdba9a01524231401&q=" + location;
+    const requestURL = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${LOCATION}`
     const request = new Request(requestURL);
     const response = await fetch(request);
     const data = await response.json();
@@ -23,8 +26,8 @@ function populateWeather(obj) {
     const temperature = document.getElementById("temperature");
     const forecast = document.getElementById("forecast");
     const icon = document.getElementById("icon");
-    const humidity = document.getElementById('humidity');
     const localTime = document.getElementById('localtime');
+    const highLowTemps = document.getElementById('highlow-temps')
     
     // searchResults.style.visibility = "visible";
     localTime.textContent = `Local Time: ${obj.location.localtime.slice(-5)}`;
@@ -32,7 +35,13 @@ function populateWeather(obj) {
     temperature.textContent = `${Math.floor(obj.current.feelslike_f)} °F`;
     forecast.textContent = obj.current.condition.text;
     icon.src = obj.current.condition.icon;
-    humidity.textContent = `Humidity: ${obj.current.humidity}%`;
+    highLowTemps.textContent = `H: ${Math.floor(obj.forecast.forecastday[0].day.maxtemp_f)}º L:${Math.floor(obj.forecast.forecastday[0].day.mintemp_f)}º`;
+
+    setBackground(obj);
+}
+
+function setBackground(obj) {
+
 }
 
 fetchWeatherData();
