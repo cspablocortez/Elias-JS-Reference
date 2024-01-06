@@ -37,7 +37,7 @@ function populateWeather(obj) {
     // searchResults.style.visibility = "visible";
     localTime.textContent = `Local Time: ${obj.location.localtime.slice(-5)}`;
     city.textContent = obj.location.name;
-    temperature.textContent = `${Math.floor(obj.current.feelslike_f)} °F`;
+    temperature.textContent = `${Math.floor(obj.current.temp_f)} °F`;
     forecast.textContent = obj.current.condition.text;
     icon.src = obj.current.condition.icon;
     highLowTemps.textContent = `H: ${Math.floor(obj.forecast.forecastday[0].day.maxtemp_f)}º L:${Math.floor(obj.forecast.forecastday[0].day.mintemp_f)}º`;
@@ -46,11 +46,23 @@ function populateWeather(obj) {
     const currentHour = parseInt(currentTime.slice(0, 2));
     console.log("Current Hour: " + currentHour);
 
-    const sixHourForecast = obj.forecast.forecastday[0].hour;
-    console.log(sixHourForecast.slice(17));
+    const sixHourForecast = obj.forecast.forecastday[0].hour.slice(currentHour + 1);
+    console.log(sixHourForecast);
 
+    // Populate next six hours
+    console.log(sixHourForecast[0].time);
 
-    // setBackground(obj);
+    const forecastIcons = document.getElementsByClassName('six-hour-forecast-icon');
+    const forecastTimes = document.getElementsByClassName('six-hour-forecast-time');
+    const forecastTemps = document.getElementsByClassName('six-hour-forecast-temp');
+
+    for (let i = 0; i < 6; i++) {
+        forecastIcons[i].src = sixHourForecast[i].condition.icon;
+        forecastTimes[i].textContent = sixHourForecast[i].time.slice(-5);
+        forecastTemps[i].textContent = `${Math.floor(sixHourForecast[i].temp_f)}º`;
+    }
+
+    
 }
 
 fetchWeatherData();
