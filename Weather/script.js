@@ -27,6 +27,8 @@ function populateWeather(obj) {
     const sunrise = obj.forecast.forecastday[0].astro.sunrise;
     const sunset = obj.forecast.forecastday[0].astro.sunset;
 
+    setBackground(currentTime, sunrise, sunset);
+
     const city = document.getElementById('city');
     const temperature = document.getElementById("temperature");
     const forecast = document.getElementById("forecast");
@@ -42,27 +44,30 @@ function populateWeather(obj) {
     icon.src = obj.current.condition.icon;
     highLowTemps.textContent = `H: ${Math.floor(obj.forecast.forecastday[0].day.maxtemp_f)}º L:${Math.floor(obj.forecast.forecastday[0].day.mintemp_f)}º`;
 
-    // Get current hours
+    // Set Six Hour Forecast
     const currentHour = parseInt(currentTime.slice(0, 2));
-    console.log("Current Hour: " + currentHour);
+    fetchSixHourForecast(currentHour, obj);
+}
 
-    const sixHourForecast = obj.forecast.forecastday[0].hour.slice(currentHour + 1);
-    console.log(sixHourForecast);
-
-    // Populate next six hours
-    console.log(sixHourForecast[0].time);
-
+function fetchSixHourForecast(currentHour, obj) {
     const forecastIcons = document.getElementsByClassName('six-hour-forecast-icon');
     const forecastTimes = document.getElementsByClassName('six-hour-forecast-time');
     const forecastTemps = document.getElementsByClassName('six-hour-forecast-temp');
+    const sixHourForecast = obj.forecast.forecastday[0].hour.slice(currentHour + 1);
 
     for (let i = 0; i < 6; i++) {
         forecastIcons[i].src = sixHourForecast[i].condition.icon;
         forecastTimes[i].textContent = sixHourForecast[i].time.slice(-5);
         forecastTemps[i].textContent = `${Math.floor(sixHourForecast[i].temp_f)}º`;
     }
+}
 
+function setBackground(currentTime, sunrise, sunset) {
+    let currentBackgroundTheme = document.body.classList; // dusk
     
+    console.log("Current time is: " + currentTime);
+    console.log("Sunrise was at: " + sunrise);
+    console.log("Sunset is at: " + sunset);
 }
 
 fetchWeatherData();
