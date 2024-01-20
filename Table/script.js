@@ -13,8 +13,11 @@ async function fetchJSON() {
 
 // 2. Fill up the table with the data
 
+// 3. TODO: Add a sort method so we can change the order of the items in the table
+
 function populateTable(data) {
     const tableBody = document.getElementById("games-table").getElementsByTagName("tbody")[0];
+    console.log(tableBody);
 
     data.games.forEach(game => {
         const row = tableBody.insertRow();
