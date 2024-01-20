@@ -22,12 +22,19 @@ function populateTable(data) {
         const cellName = row.insertCell(1);
         const cellYear = row.insertCell(2);
         const cellPublisher = row.insertCell(3);
+        const cellImage = row.insertCell(4);
+
+        const gameImage = document.createElement("img");
+        gameImage.src= game.imageURL;
+        gameImage.style.height = '50px';
+        gameImage.style.width= '50px';
+        gameImage.style.borderRadius = '10px';
+        cellImage.appendChild(gameImage);
 
         cellID.textContent = game.id;
         cellName.textContent = game.name;
         cellYear.textContent = game.year;
         cellPublisher.textContent = game.publisher;
-
     });
 }
 
