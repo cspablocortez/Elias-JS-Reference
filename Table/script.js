@@ -1,5 +1,3 @@
-// 1. Get the JSON file
-
 async function fetchJSON() {
     try {
         const response = await fetch("../VideoGameCollection/data.json");
@@ -10,10 +8,6 @@ async function fetchJSON() {
         console.error("Error fetching JSON: ", error);
     }
 }
-
-// 2. Fill up the table with the data
-
-// 3. TODO: Add a sort method so we can change the order of the items in the table
 
 function populateTable(data) {
     const tableBody = document.getElementById("games-table").getElementsByTagName("tbody")[0];
