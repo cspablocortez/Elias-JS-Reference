@@ -1,4 +1,4 @@
-const formatNumber = (number) => {
+const formatNumber = () => {
     const phoneOutput = document.getElementById("phone-output");
 
     const areaCode   = number.slice(0, 3);
