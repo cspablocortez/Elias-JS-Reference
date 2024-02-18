@@ -6,8 +6,9 @@
     <title>theCoderGames</title>
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/skeleton.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.css">
     <style>
-        span {
+        #points {
             color: green;
             background-color: rgba(134, 234, 139, 0.493);
             padding: 5px;
@@ -24,11 +25,27 @@
     <div class="container">
         <div class="row">
             <h1>theCoderGames</h1>
-            <p>1. Write code to ask the user a random addition problem (X + Y). When the user inputs the answer, your program needs to reply back with CORRECT or INCORRECT to let the user know if they are right or not. <span>(10 pts)</span></p>
-            <p>2. Create a random number generator. Take as inputs the minimum and maximum numbers that are possible. Then output a random number within this range. <span>(10 pts)</span></p>
-            <p>3. Take as input 10 random characters or integers. Remove all characters(non-integers), then sum up the integers and return this sum as your output. <span>(20 pts)</span></p>
-            <p>4. Take as input a string, output the string in reverse. <span>(20 pts)</span></p>
+            <p>1. Write code to ask the user a random addition problem (X + Y). When the user inputs the answer, your program needs to reply back with CORRECT or INCORRECT to let the user know if they are right or not. <span id='points'>(10 pts)</span></p>
+            <pre>
+                <code>
+((MIN=1, MAX=10) => {
+    const x = Math.floor(Math.random() * MAX) + MIN
+    const y = Math.floor(Math.random() * MAX) + MIN
+    
+    readline.question(`${x} + ${y}\n > `, answer => {
+        console.log(+answer === (x + y) ? '\nCORRECT\n' : '\nINCORRECT\n')
+        readline.close(
+    })
+})()
+                </code>
+            </pre>
+            <p>2. Create a random number generator. Take as inputs the minimum and maximum numbers that are possible. Then output a random number within this range. <span id='points'>(10 pts)</span></p>
+            <p>3. Take as input 10 random characters or integers. Remove all characters(non-integers), then sum up the integers and return this sum as your output. <span id='points'>(20 pts)</span></p>
+            <p>4. Take as input a string, output the string in reverse. <span id='points'>(20 pts)</span></p>
         </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </body>
 </html>
